@@ -58,7 +58,7 @@ class Plugin_haiku_errors extends Plugin {
    * Returns a random haiku.
    */
   public function index() {
-    $message = $this->haikus[rand(0, sizeof($this->haikus))];
+    $message = $this->haikus[rand(0, sizeof($this->haikus) - 1)];
     $lines = explode("\n", $message);
 
     foreach ($lines as $i => $line) {
